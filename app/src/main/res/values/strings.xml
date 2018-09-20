@@ -2,4 +2,8 @@
     <string name="app_name">Figerset</string>
     <string name="welcome">Produced by JRs</string>
     <string name="tips">请输入密码</string>
+    <string name="tab1">界面1</string>
+    <string name="tab2">界面2</string>
+    <string name="Tab3">界面3</string>
+    <string name="tab4">界面4</string>
 </resources>

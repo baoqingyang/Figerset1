@@ -1,5 +1,6 @@
 package com.example.intent.figerset.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -29,10 +30,12 @@ public class UnlockActivity extends AppCompatActivity {
             public boolean onDrawFinished(List<Integer> passList) {
                 String input="";
                 for(int i = 0;i<passList.size();i++){
-                    input+=passList.get(i).toString();
+                    input += passList.get(i).toString();
                 }
                 if (input.equals(dateBaseOperator.queryOne("user"))){
                     Toast.makeText(UnlockActivity.this, "密码正确", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(UnlockActivity.this,MainActivity.class);
+                    startActivity(intent);
                 }
                 else{
                     Toast.makeText(UnlockActivity.this, "密码错误", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Figerset</string>
+    <string name="welcome">Produced by JRs</string>
+    <string name="tips">请输入密码</string>
+</resources>

@@ -16,8 +16,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager pager = null;
-    ArrayList<View> viewContainter = new ArrayList<View>();
+    PagerTabStrip tabStrip = null;
 
+    ArrayList<View> viewContainter = new ArrayList<>();
+    ArrayList<String> titleContainer = new ArrayList<>();
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adpter);
 
         pager = findViewById(R.id.viewpager);
+
+        tabStrip = findViewById(R.id.tabstrip);
+        //取消tab下面的长横线
+        tabStrip.setDrawFullUnderline(false);
+        //设置tab的背景
+        //设置当前tab页签的下划线颜色
+        //tabStrip.setTabIndicatorColorResource(R.color.red);
+        tabStrip.setTextSpacing(400);
 
         View view1 = LayoutInflater.from(this).inflate(R.layout.tab1, null);
         View view2 = LayoutInflater.from(this).inflate(R.layout.tab2, null);
@@ -36,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         viewContainter.add(view3);
         viewContainter.add(view4);
         //设置Adapter
+
+
+        //页签项
+        titleContainer.add("今日头条");
+        titleContainer.add("今天热点");
+        titleContainer.add("今日财经");
+        titleContainer.add("今日军事");
+
         pager.setAdapter(new MyPagerAdapters());
 
     }
@@ -65,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean isViewFromObject(View arg0, Object arg1) {
             return arg0 == arg1;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titleContainer.get(position);
         }
     }
 }

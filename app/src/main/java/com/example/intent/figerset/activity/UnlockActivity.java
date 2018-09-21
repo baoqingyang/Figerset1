@@ -34,7 +34,7 @@ public class UnlockActivity extends AppCompatActivity {
                 }
                 if (input.equals(dateBaseOperator.queryOne("user"))){
                     Toast.makeText(UnlockActivity.this, "密码正确", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(UnlockActivity.this,MainActivity.class);
+                    Intent intent = new Intent(UnlockActivity.this,VP_FG_Activity.class);
                     startActivity(intent);
                 }
                 else{

@@ -11,4 +11,7 @@
     <string name="no_name">佚名</string>
     <string name="tel">电话号码</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="choose">已选择</string>
+    <string name="save">保存</string>
+    <string name="choose_all">全选</string>
 </resources>

@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
 import android.support.v4.view.ViewPager;
 
-import com.example.intent.figerset.Fragment.DContacts;
+
+import com.example.intent.figerset.Fragment.DContactsFragment;
 import com.example.intent.figerset.Fragment.FragmentView;
 import com.example.intent.figerset.Fragment.MyFragmentAdapter;
 import com.example.intent.figerset.R;
@@ -50,7 +50,7 @@ public class VP_FG_Activity extends FragmentActivity {
         bundle4.putString("Title","第四个Fragment");
         bundle4.putInt("pager_num",4);
         Fragment fg4=FragmentView.newInstance(bundle4);
-        Fragment fg5 = new DContacts();
+        Fragment fg5 = new DContactsFragment();
         list.add(fg1);
         list.add(fg2);
         list.add(fg3);
